@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, html, body{
+    font-family: "Poppins", sans-serif;
+}
+
+.info-text{
+    text-align: center;
+    font-weight: 500;
+    color: #696969;
+}
+
+/**SEARCH**/
+.search-wrap{
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: white;
+    height: 50px;
+    margin: auto;
+    padding: 50px 30px;
+}
+.search-box{
+    text-align: center;
+    position: relative;
+    input{
+        height: 40px;
+        width: 50%;
+        font-size: 15px;
+        padding: 5px 15px;
+        padding-right: 60px;
+        border-radius: 26px;
+        box-shadow: 0 7px 31px 0 rgb(0, 0, 0, 0.1);
+        outline: none;
+        border: 1px solid #c1c1c1;
+        text-transform: capitalize;
+        color: #222222;
+    }
+    .MuiButtonBase-root.MuiIconButton-root{
+        right: 48px;
+        font-size: 28px;
+        &::before{
+            content: '';
+            border-left: 1px solid #e3dcdc;
+            height: 35px;
+            position: absolute;
+            left: -6px;
+        }
+    }
+}
+
+.recipe-container{
+    position: relative;
+    .recipe-wrap{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        margin-top: 15%;
+    }
+}
+
+
+/**CARD**/
+.card-box{
+    &.MuiCard-root{
+        height: 300px;
+        margin-bottom: 25%;
+        border-radius: 15px;
+    }
+    .MuiBox-root{
+        &.img-box{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -50px;
+            z-index: 1000;
+            margin: auto;
+            width: fit-content;
+            img{
+                width: 200px;
+                height: 200px;
+                object-fit: contain;
+                box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.2);
+                border-top-left-radius: 40px;
+                border-bottom-right-radius: 40px;
+                border: 2px solid #c1c1c1;
+            }
+        }
+        &.text-box{
+            margin-top: 62%;
+            text-align: center;
+            .MuiTypography-root{
+                font-family: "Poppins", sans-serif;
+                &.MuiTypography-h5{
+                    font-size: 16px;
+                    font-weight: 500;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            .MuiCardActions-root .MuiButtonBase-root.MuiButton-root{
+                font-family: "Poppins", sans-serif;
+                margin: auto;
+                font-size: 14px;
+                background: #c5f0ad;
+                color: #384e16;
+            }
+        }
+    }
+}
+
+.receipe-info{
+    position: relative;
+    .card-box{
+        &.MuiCard-root{
+            height: auto;
+            margin-bottom: 0;
+            padding: 2rem;
+            margin-left: 10%;
+            width: 75%;
+        }
+        .MuiBox-root{
+            &.img-box{
+                position: absolute;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: auto;
+                display: flex;
+                img{
+                    width: 270px;
+                    height: 270px;
+                    margin: auto;
+                }
+            }
+            &.text-box{
+                margin-top: 0;
+                text-align: left;
+                .MuiCardContent-root{
+                    margin-left: 20%;
+                }
+                .MuiTypography-root.MuiTypography-h4{
+                    font-size: 26px;
+                    font-weight: 500;
+                    margin-bottom: 24px;
+                }
+                .type-list {
+                    display: flex;
+                    font-size: 14px;
+                    text-transform: capitalize;
+                    color: #808080;
+                    font-weight: 300;
+                    margin-bottom: 20px;
+                    padding-left: 0;
+                    li{
+                        float: left;
+                        margin-right: 10%;
+                        list-style: none;
+                        display: flex;
+                        line-height: 2;
+                        img{
+                            height: 26px;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+                .step-box{
+                    .MuiTypography-root.MuiTypography-h6{
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                    li{
+                        font-size: 15px;
+                        line-height: 2;
+                        color: #666969;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**Favorite recipe**/
+.favor-recipe{
+    padding-top: 30px;
+    h2{
+        margin-bottom: 8%;
+        text-align: center;
+        font-size: 23px;
+        font-weight: 600;
+    }
+    .card-box .MuiBox-root.text-box .MuiCardActions-root .MuiButtonBase-root.MuiButton-root{
+       &:last-child{
+            display: none;
+       } 
+    }
+}
+.favor-btn.MuiButtonBase-root.MuiButton-root{
+    position: absolute;
+    top: 0;
+    right: 18%;
+    bottom: 0;
+    margin: auto;
+    height: fit-content;
+    color: #696969;
+    .MuiSvgIcon-root{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/**Responsive**/
+@media screen and (max-width:600px){
+    .search-box {
+        text-align: justify;
+    }
+    .favor-btn.MuiButtonBase-root.MuiButton-root{
+        right: 16%;
+    }
+    .card-box .MuiBox-root.text-box {
+        margin-top: 47%;
+    }
+    .recipe-container .recipe-wrap{
+        margin-top: 55%;
+    }
+    .receipe-info .card-box .MuiBox-root.img-box{
+        position: unset;
+    }
+    .receipe-info .card-box.MuiCard-root{
+        width: auto;
+        margin-left: 0;
+        padding: 1rem;
+    }
+    .receipe-info .card-box .MuiBox-root.text-box .MuiCardContent-root{
+        margin-left: 0;
+        margin-top: 10%;
+    }
+    .receipe-info .card-box .MuiBox-root.text-box .type-list li img {
+        height: 19px;
+        margin-right: 6px;
+    }
+    .receipe-info .card-box .MuiBox-root.text-box .type-list{
+        font-size: 12px;
+    }
+    .step-box ul{
+        padding-left: 8px;
+    }
+    .favor-recipe h2 {
+        margin-bottom: 25%;
+    }
+}
+@media screen and (min-width:768px) and (max-width:992px){
+    .receipe-info .card-box .MuiBox-root.img-box img {
+        width: 200px;
+        height: 200px;
+    }
+    .recipe-container .recipe-wrap{
+        margin-top: 25%;
+    }
+    .favor-btn.MuiButtonBase-root.MuiButton-root{
+        right: 14%;
+    }
+    .card-box .MuiBox-root.text-box {
+        margin-top: 47%;
+    }
+    .card-box.MuiCard-root{
+        margin-bottom: 23%;
+    }
+    .favor-recipe h2 {
+        margin-bottom: 14%;
+    }
+}
